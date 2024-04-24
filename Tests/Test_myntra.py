@@ -33,10 +33,11 @@ def test_myntra():
     page = Finalpage(driver)
     time.sleep(5)
 
-    product_results = driver.find_elements(page.allProducts)
+    product_results = driver.find_elements(By.CLASS_NAME,'product-base')
     for product in product_results:
-            i=1
-            print(product.find_elements(By.TAG_NAME,"a")).text
+            link = product.find_elements(By.TAG_NAME,"a")
+            for l in link:
+                print(l.text)
     
 
 
