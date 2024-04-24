@@ -36,7 +36,7 @@ def test_myntra():
     product_results = driver.find_elements(page.allProducts)
     for product in product_results:
             i=1
-            print(product.find_element(By.TAG_NAME,"a").text)
+            print(product.find_elements(By.TAG_NAME,"a")).text
     
 
 
